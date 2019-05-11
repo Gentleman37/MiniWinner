@@ -94,7 +94,10 @@ def codelete(request, copost_pk):
 def recipe(request):
     posts = Post.objects.all()
     food_list = request.POST.getlist('chk_info')
+    foods = ''
+    for food in food_list:
+        foods = foods + food + '+'
     return render(request, 'recipe.html', {
         'posts':posts,
-        'food_list':food_list
+        'foods':foods
     })

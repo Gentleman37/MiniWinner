@@ -5,16 +5,16 @@
         <h2><a href = "#">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
     {%endfor%}
 
-    <form method = 'POST' action = '#'>
+    <form method = 'POST' action = '#'>{% csrf_token %}
         {% for post in posts%}
         <input type="checkbox" name="chk_info" value="{{post.name}}">{{post.name}}<br>
         {% endfor %}
-        <input type = 'submit'>check complete
+        <input type = 'submit'/>check complete
     </form>
 
-
-    <a href="https://search.naver.com/search.naver?query=레시피" target="_blank"><button type='submit'>show available recipes</button></a>
-
+    <a href="https://terms.naver.com/search.nhn?query={{foods}}+레시피" target="_blank"
+    <button type='submit'>show available recipes</button>
+    </a>
 {% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
 
 {% endblock content %}
