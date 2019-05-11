@@ -4,6 +4,8 @@ from .models import Post, Copost
 from django.contrib.auth.models import User
 from django.contrib import auth
 
+
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -13,7 +15,7 @@ def new(request):
         form = PostForm(request.POST, request.FILES)
         post = form.save(commit=False)
         post.save()
-        return redirect('home')
+        return redirect('detail', post.pk)
     else:
         form = PostForm()
     return render(request, 'new.html', { 'form' : form })
@@ -102,3 +104,7 @@ def recipe(request):
         'foods':foods,
         'food_list':food_list
     })
+
+def post_list(request):
+    post_list = Post.objects.prefetch_related('tag_set').select_related('author__profile').all()
+    return render(request, 'post/post_list.html', {'post_list':post_list,})

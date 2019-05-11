@@ -14,5 +14,9 @@
         </div>
 
     {% endblock content %}
+    {% for post in post_list %}
+    <ul>
+        <li>{{ post.author.profile.nickname }}</li>
+        <li><img src="{{ post.photo.url }}" alt="{{ post.author }}'s photo
 </body>
 </html>
