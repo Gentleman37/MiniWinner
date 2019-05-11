@@ -14,6 +14,10 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ('username', 'password')
         widgets = {'password': forms.PasswordInput()}
+        help_texts = {
+            'username': None,
+        }
+
 
 
 class CopostForm(forms.ModelForm):
