@@ -31,5 +31,12 @@
     font-size: 35px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.login-buttons {
+    margin-top: 12px;
+}
 
-
+.login-buttons button {
+    margin: 0 5px;
+    font-size: 17px;
+    width: fit-content;
+}
