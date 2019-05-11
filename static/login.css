@@ -5,6 +5,19 @@
 
 .background{
     background-image: url('peter-wendt-123928-unsplash.jpg');
-    background-size: cover;
-    
+    background-size: cover;   
+}
+
+.loginlabel{
+   height: 50px; 
+}
+
+.loginlabel input{
+    height: 35px;
+
+}
+
+.userlabel{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
