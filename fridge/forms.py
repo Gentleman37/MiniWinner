@@ -29,7 +29,10 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username', 'password')
-        widgets = {'password': forms.PasswordInput()}
+        widgets = {
+            'password': forms.PasswordInput(attrs={'placeholder':'Username', 'size':'20'}),
+            'username': forms.TextInput(attrs={'placeholder':'Password', 'size':'20'})
+            }
         help_texts = {
             'username': None,
         }
