@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mini.wsgi.application'
 LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/home'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
