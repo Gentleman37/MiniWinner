@@ -1,21 +1,29 @@
 /* base */
 
+/* base.html */
+
 .navbar {
     width: 100%;
     height: 50px;
     padding: 10px;
     background-color: #efefef00;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   
-  .navitem {
-    font-size: 18px;
-    margin-left: 15px;
+.navitem {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
   }
-  
+
+.items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:25%;
+}
   a {
     text-decoration: none;
     color: black;
@@ -24,3 +32,71 @@
   a:visited {
     color: black;
   }
+
+/* home.html */
+.home_p1{
+  background-image:url('home_img3.jpg');
+  background-size: 100%;
+  background-position-y: 28%;
+  height: 60vh;
+  max-width : 100%;
+}
+.home_text{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 40%;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 8%;
+}
+
+.hello1{
+
+  font-family: 'Lobster', cursive;
+  font-size: 600%;
+  color : rgba(33, 70, 39, 0.945);
+  margin-right: 30%;
+
+}
+.hello2{
+  margin-top:3%;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 155%;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.596);
+  line-height:1.7em ;
+  margin-right: 7.5%;
+}
+.hello2 span{
+  font-family:'Lobster', cursive;
+}
+.home_p2{
+  display: flex;
+  flex-wrap: wrap;
+  width : 60%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3% auto;
+}
+.contents{
+  width: 30%;
+  height: 30%;
+  background-color: aqua;
+  margin : 1%;
+}
+
+/* detail.html */
+
+
+/* new.html */
+
+
+/* recipe.html */
+
+
+/* about.html */
+
+
+/* edit.html */
