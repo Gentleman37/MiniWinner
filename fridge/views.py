@@ -122,7 +122,8 @@ def recipe(request):
     return render(request, 'recipe.html', {
         'posts':posts,
         'foods':foods,
-        'food_list':food_list
+        'food_list':food_list,
+        'final_date':final_date
     })
 
 
