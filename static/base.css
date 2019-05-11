@@ -108,13 +108,14 @@ body{
 .content_info{
 
   display: flex;
+  width: 25vh;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 18px;
   margin-bottom : 7%;
-  margin-right: 50%;
+  margin-right: 10%;
 
 }
 .contents img{
@@ -125,12 +126,17 @@ body{
 .contents p{
   margin:0;
 }
-.detail_info{
+.contents span{
   font-weight: 700;
 }
 .date2{
-  padding-top: 2%;
+  padding-top: 3%;
   color : rgb(11, 96, 175);
+  font-weight: bold;
+}
+.date1{
+  padding-top: 3%;
+  color : rgb(219, 44, 67);
   font-weight: bold;
 }
 

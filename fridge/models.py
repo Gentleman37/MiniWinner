@@ -98,7 +98,6 @@ class Post(models.Model):
         return self.name
 
 
-
 class Copost(models.Model):
     cotitle = models.CharField(max_length=200)
     cocontents = models.TextField()
