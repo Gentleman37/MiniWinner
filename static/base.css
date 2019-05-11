@@ -214,6 +214,9 @@ body{
 }
 
 /* about.html */
-
+.about{
+  display: flex;
+  flex-direction: column;
+}
 
 /* edit.html */
