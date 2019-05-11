@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel = 'stylesheet' href = "{%static 'login.css' %}?v=0.7"/>
+    <link rel = 'stylesheet' href = "{%static 'login.css' %}?v=0.7"/>
     <title>Document</title>
 </head>
 <body class="background">
@@ -16,8 +16,14 @@
         {% if error %}
         {{ error }}
         {% endif %}
-       <div class="IDPASS"> {{ form.as_p }}
-        <input type="submit" value="Login"> </div>
+    <div class="IDPASS"> 
+        <div class="loginlabel"><span class="userlabel">username</span>: {{ form.username }}</div>
+        <div class="loginlabel"><span class="userlabel">password</span>: {{ form.password }}</div>
+        <div class="login-buttons">
+            <button type="submit">Login</button>
+            <a href="{% url 'signup' %}"><button>Signup</button></a>
+        </div>
+    </div>
     </form>
 
     {% block content %}

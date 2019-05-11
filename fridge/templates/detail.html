@@ -1,15 +1,11 @@
 {% extends 'base.html' %}
     {% block content %}
-        <style type = "text/css">
-    body {
-        background-color: #FFD2D2;
-    }
+    <style type = "text/css">
     </style>
     <div class = 'dldl'>
     <div class = 'detail'>
         <div class = 'left'>
             <img src="{{ post.img.url }}" />
-
         </div>
 
         <div class = 'right'>
@@ -27,15 +23,17 @@
                 <h4>{{post.memo}}</h4>
             </div>
 
-            <div class="return">
-                <a href="{% url 'edit' post.pk %}">게시물 수정하기</a><br>
-                {% if exp_date >= 0 %}
-                <a href="{% url 'delete' post.pk %}">먹어버리기</a>
-                {% else %}
-                <a href="{% url 'delete' post.pk %}">갖다버리기</a>
-                {% endif %}
-            </div>
+
+                <div class="return">
+                    <a href="{% url 'edit' post.pk %}"><button>게시물 수정하기</button></a><br>
+                    {% if exp_date >= 0 %}
+                    <a href="{% url 'delete' post.pk %}"><button>먹어버리기</button></a>
+                    {% else %}
+                    <a href="{% url 'delete' post.pk %}"><button>갖다버리기</button></a>
+                    {% endif %}
+                </div>
         </div>
+    </div>
     </div>
     {% endblock %}
 

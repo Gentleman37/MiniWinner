@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
     {% block content %}
+    <img src="{static 'comunity.jpg'}" id="bg" alt="">
+    
+    <div class = 'codetail'>
+    <div class = 'codetail_content'>
     <h2>{{ copost.cotitle }}</h2>
     <h2>{{ copost.user_name }}</h2>
     <h5>{{ copost.cocontents }}</h5>
-    <a href="{% url 'cohome' %}">글 목록으로 돌아가기</a>
-    <a href="{% url 'coedit' copost.pk %}">수정하기</a>
+    </div>
+    <div class = 'codetail_return'>
+    <a href="{% url 'cohome' %}">글 목록으로 돌아가기</a><br>
+    <a href="{% url 'coedit' copost.pk %}">수정하기</a><br>
     <a href="{% url 'codelete' copost.pk %}">삭제하기</a>
+    </div>
+    </div>
 {% endblock content %}
+
 </body>
+
 </html>
