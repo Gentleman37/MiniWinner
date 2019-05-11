@@ -17,7 +17,7 @@
                 {% if exp_date >= 0 %}
                 <h4>{{ exp_date }}일 남았습니다.</h4>
                 {%else%}
-                <h4>유통기한 만기</h4>
+                <h4>{{ exp_date }}지났습니다! 버리세요!</h4>
                 {% endif %}
             </div>
 

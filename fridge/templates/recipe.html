@@ -6,10 +6,12 @@
     <h3>요리법 찾기</h3>
         <form method = 'POST' action = ''>{% csrf_token %}
             <div class="recipe-checkbox">
-                {% for post in posts%}
-                <div>
-                    <input type="checkbox" name="chk_info" value="{{post.name}}" {% if post.name in food_list %} checked {% endif %}>{{post.name}}<br>
-                </div>
+                {% for post, date in post_dict.items %}
+                    {% if date >= 0 %}
+                    <div>
+                        <input type="checkbox" name="chk_info" value="{{post.name}}" {% if post.name in food_list %} checked {% endif %}>{{post.name}}<br>
+                    </div>
+                    {% endif %}
                 {% endfor %}
                 <input type = 'submit' value="체크완료" />
             </div>
@@ -26,11 +28,19 @@
     <div class="recipe-posts">
         
         {% for post, date in post_dict.items %}
-        <div class="recipe-images">
-            <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
-            <h3><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h3>
-            <h4>{{ date }}일 남았습니다</h4>
-        </div>
+            {% if date < 0 %}
+            <div class="recipe-images">
+                <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
+                <h3><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h3>
+                <h4>{{ date }}일 지났습니다! 버리세요!</h4>
+            </div>
+            {% else %}
+            <div class="recipe-images">
+                <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
+                <h3><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h3>
+                <h4>{{ date }}일 남았습니다</h4>
+            </div>
+            {% endif %}
         {% endfor %}
     </div>
 
