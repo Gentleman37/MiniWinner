@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 
 # Create your views here.
+def home(request):
+    return render(request, 'home.html')
 
 def new(request):
     if request.method == 'POST':
@@ -87,3 +89,12 @@ def codelete(request, copost_pk):
     copost = Copost.objects.get(pk = copost_pk)
     copost.codelete()
     return redirect('cohome')
+
+    
+def recipe(request):
+    posts = Post.objects.all()
+    food_list = request.POST.getlist('chk_info')
+    return render(request, 'recipe.html', {
+        'posts':posts,
+        'food_list':food_list
+    })
