@@ -24,7 +24,11 @@
             <div class="return">
 
                 <a href="{% url 'edit' post.pk %}">게시물 수정하기</a><br>
-                <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
+                {% if exp_date >= 0 %}
+                <a href="{% url 'delete' post.pk %}">먹어버리기</a>
+                {% else %}
+                <a href="{% url 'delete' post.pk %}">갖다버리기</a>
+                {% endif %}
             </div>
         </div>
     </div>
