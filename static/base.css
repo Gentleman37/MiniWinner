@@ -3,6 +3,7 @@
 /* base.html */
 body{
   margin: 0;
+  background-color: rgba(204, 204, 204, 0.205);
 }
 .navbar {
     width: 100%;
@@ -86,17 +87,51 @@ body{
 .home_p2{
   display: flex;
   flex-wrap: wrap;
-  width : 60%;
+  width : 75%;
   height: 100%;
   justify-content: space-around;
   align-items: center;
   margin: 3% auto;
 }
 .contents{
-  width: 30%;
-  height: 30%;
-  background-color: aqua;
-  margin : 1%;
+  display: flex;
+  flex-direction: column;
+  width: 27vh;
+  height: 36vh;
+  background-color: rgba(207, 207, 207, 0.267);
+  margin : 0.5%;
+  padding : 2%;
+  justify-content: center;
+  align-items: center;
+  border : 1.5px solid rgba(128, 128, 128, 0.226);
+}
+.content_info{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+  margin-bottom : 7%;
+  margin-right: 50%;
+
+}
+.contents img{
+  width: 30vh;
+  height: 30vh;
+  margin-top: 10px;
+}
+.contents p{
+  margin:0;
+}
+.detail_info{
+  font-weight: 700;
+}
+.date2{
+  padding-top: 2%;
+  color : rgb(11, 96, 175);
+  font-weight: bold;
 }
 
 /* detail.html */
@@ -133,13 +168,14 @@ body{
   height: 100px;
   border: solid 1px blanchedalmond;
   border-top: solid 1px black;
+  border-right: solid 1px black;
   text-align: center;
   justify-content:center;
 }
 .info{
-  margin-top: auto;
-  margin-bottom: auto;
   text-align: center;
+  margin-top: auto;
+  margin-bottom:auto;
 }
 .detail_name{
   font-size: 30px;
@@ -158,7 +194,8 @@ body{
 
 /* recipe.html */
 .recipe-box {
-  margin: 10px 10%;
+  margin: 0 7%;
+  background-color: rgba(207, 207, 207, 0.13);
 }
 .recipe-search {
   margin-top: 2%;
@@ -213,6 +250,30 @@ body{
 }
 
 /* about.html */
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dldlk{
+  margin-top: 225px;
+  margin-bottom: auto;
+  text-align: center;
+}
 
+.about_logo_img{
+  width: 1020px;
+  height: 480px;
+}
+
+.about_logo_name{
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.about_explan{
+  margin-top: 50px;
+  font-size: 30px;
+}
 
 /* edit.html */
