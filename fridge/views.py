@@ -3,12 +3,13 @@ from .forms import PostForm, UserForm, CopostForm
 from .models import Post, Copost 
 from django.contrib.auth.models import User
 from django.contrib import auth
-
+from datetime import datetime
 
 
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
+
 
 def new(request):
     if request.method == 'POST':
@@ -22,7 +23,21 @@ def new(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk = post_pk)
+
+    
+    year = int(year)
+    month = int(month)
+    date = int(date)
+
+    time_buy = datetime(year, month, date)
+    time_now = datetime.now()
+
+    print(time_buy)
+    print(time_now)
+
+    print((time_buy - time_now).days, '일 남았습니다.')
     return render(request, 'detail.html',{ 'post' : post })
+
 
 def edit(request, post_pk):
     post = Post.objects.get(pk = post_pk)
