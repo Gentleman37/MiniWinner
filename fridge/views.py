@@ -35,8 +35,9 @@ def delete(request, post_pk):
     post.delete()
     return redirect('home')
 
-
-
+def about(request)
+    return render(request, 'about.html')
+    
 def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
@@ -86,4 +87,3 @@ def codelete(request, copost_pk):
     copost = Copost.objects.get(pk = copost_pk)
     copost.codelete()
     return redirect('cohome')
-    
