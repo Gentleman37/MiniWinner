@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}  
     {%for post in posts%}
-        <h2><a href = "{%url 'detail' post.pk%} ">{{post.title}}</a></h2>
-        <img src = "{%url 'new' %}"/><br>
+        <img src = "{{ post.img.url }}"/><br>        
+        <h2><a href = "{%url 'detail' post.pk%} ">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family_choices}}</h2>
     {%endfor%}
+
     <form method = 'post' action = '#'>
     {% for %}
     <input type="checkbox" name="chk_info" value="{{}}">{{}}
