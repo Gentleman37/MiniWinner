@@ -2,7 +2,7 @@
 {% block content %}  
     {%for post in posts%}
         <a href = "{%url 'detail' %}"><img src = "{{ post.img.url }}"/></a><br>        
-        <h2><a href = "{%url 'detail' post.pk%} ">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family_choices}}</h2>
+        <h2><a href = "{%url 'detail' post.pk%} ">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
     {%endfor%}
 
     <form method = '#' action = '#'>
