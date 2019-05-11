@@ -15,11 +15,7 @@ def new(request):
         form = PostForm(request.POST, request.FILES)
         post = form.save(commit=False)
         post.save()
-<<<<<<< HEAD
-        return redirect('detail', post.pk)
-=======
         return redirect('home')
->>>>>>> 6b809ede9d194889be143f4570f5219d706f08b5
     else:
         form = PostForm()
     return render(request, 'new.html', { 'form' : form })

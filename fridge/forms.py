@@ -9,6 +9,7 @@ class PostForm(forms.ModelForm):
         fields = ('name', 'family', 'exp_date', 'img',)
 
 
+
 class UserForm(forms.ModelForm):
     class Meta:
         model = User

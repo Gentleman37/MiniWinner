@@ -1,4 +1,4 @@
-import datetime
+
 from django.db import models
 from django.utils import timezone
 
@@ -6,7 +6,7 @@ from django.utils import timezone
 # Create your models here.
 class Post(models.Model):
     name = models.CharField(max_length=200)
-    exp_date = models.ChoiceField(max_length=200, default=timezone.now)
+    exp_date = models.CharField(max_length=200)
     img = models.FileField(null=True)
     family_choices=(
         ("과일", '과일'),
@@ -22,13 +22,10 @@ class Post(models.Model):
         max_length=200,
     )
     memo = models.TextField()
-    tag_set=models.ManytoManyField('Tag', blank=True)
 
+    
     def __str__(self):
         return self.name
-
-class Tag(models.Model):
-    name = models.CharField(max_length=140, unique=True)
 
 class Copost(models.Model):
     cotitle = models.CharField(max_length=200)
