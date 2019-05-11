@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
     {% block content %}
+        <style type = "text/css">
+    body {
+        background-color: #FFD2D2;
+    }
+    </style>
     <div class = 'dldl'>
     <div class = 'detail'>
         <div class = 'left'>
@@ -17,14 +22,17 @@
                 {% if exp_date >= 0 %}
                 <h4>{{ exp_date }}일 남았습니다.</h4>
                 {%else%}
-                <h4>유통기한 만기</h4>
+                <h4>{{ exp_date }}지났습니다! 버리세요!</h4>
                 {% endif %}
             </div>
 
             <div class="return">
-
                 <a href="{% url 'edit' post.pk %}">게시물 수정하기</a><br>
-                <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
+                {% if exp_date >= 0 %}
+                <a href="{% url 'delete' post.pk %}">먹어버리기</a>
+                {% else %}
+                <a href="{% url 'delete' post.pk %}">갖다버리기</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -9,12 +9,19 @@ from datetime import datetime
 # Create your views here.
 def home(request):
     posts = Post.objects.all()
-    food_list = request.POST.getlist('chk_info')
-    foods = ''
-    for food in food_list:
-        foods = foods + food + '+'
-    return render(request, 'home.html', {'posts':posts,'foods':foods,
-    'food_list':food_list })
+    
+    date_list = []
+    for post in posts:
+        year = int(post.year)
+        month = int(post.month)
+        date = int(post.date)
+        time_buy = datetime(year, month, date)
+        time_now = datetime.now()
+        exp_date = (time_buy - time_now).days
+        date_list.append(exp_date)
+
+    post_dict = dict(zip(posts, date_list))
+    return render(request, 'home.html', {'posts':posts, 'post_dict':post_dict })
 
 
 def new(request):
@@ -122,11 +129,25 @@ def recipe(request):
     foods = ''
     for food in food_list:
         foods = foods + food + '+'
+
+    date_list = []
+    for post in posts:
+        year = int(post.year)
+        month = int(post.month)
+        date = int(post.date)
+        time_buy = datetime(year, month, date)
+        time_now = datetime.now()
+        exp_date = (time_buy - time_now).days
+        date_list.append(exp_date)
+
+    post_dict = dict(zip(posts, date_list))
+
     return render(request, 'recipe.html', {
         'posts':posts,
         'foods':foods,
         'food_list':food_list,
-        'final_date':final_date
+        'date_list':date_list,
+        'post_dict':post_dict
     })
 
 
