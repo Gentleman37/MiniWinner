@@ -315,20 +315,28 @@ body{
 
 /*copost.html*/
 .codetail{
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 300px;
+  height: 1400px;
 }
 
 .codetail_return{
-  margin-top: 50px;
+  position: absolute;
+
+  margin-top: 770px;
+  margin-left: 350px;
 }
 
+.gg{
+  margin-left:395px;
+  margin-top: 250px;
+  position: absolute;
+
+}
 .codetail_content{
   text-align: center;
+  margin-top: 250px;
 }
 
-#bg { position: fixed; top: 0; left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
