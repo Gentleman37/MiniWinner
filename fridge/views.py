@@ -78,7 +78,7 @@ def codetail(request, copost_pk):
 def coedit(request, copost_pk):
     copost = Copost.objects.get(pk = copost_pk)
     if request.method == "POST":
-        form = Copostform(request.POST, instance = copost)
+        form = CopostForm(request.POST, instance = copost)
         form.save()
         return redirect('codetail', copost.pk)
     else:
