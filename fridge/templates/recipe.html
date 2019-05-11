@@ -12,8 +12,8 @@
     </a>
     <br>
     {%for post in posts%}
-        <a href = "#"><img src = "{{ post.img.url }}"/></a><br>        
-        <h2><a href = "#">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
+        <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
+        <h2><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
     {%endfor%}
 
 {% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
