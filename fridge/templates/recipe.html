@@ -12,9 +12,9 @@
         <input type = 'submit'>check complete
     </form>
 
-    {% for food in food_list %}
-        <a href= "https://search.naver.com/search.naver?query={{food}}+레시피"><button type='submit'>show available recipes</button></a>
-    {% endfor %}
+    
+    <a {% for food in food_list %} href="https://search.naver.com/search.naver?query={{food}}+레시피" {% endfor %}><button type='submit'>show available recipes</button></a>
+    
 {% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
 
 {% endblock content %}
