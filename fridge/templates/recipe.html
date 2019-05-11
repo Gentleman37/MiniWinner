@@ -3,7 +3,7 @@
 <div class="recipe-box">
 
     <div class="recipe-search">
-    <h3>요리법 찾기</h3>
+    <a class="find-recipe">요리법 찾기</a>
         <form method = 'POST' action = ''>{% csrf_token %}
             <div class="recipe-checkbox">
                 {% for post, date in post_dict.items %}
@@ -18,12 +18,12 @@
         </form>
         <div class="recipe-toggle-button">
             <a href="https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query={{foods}}레시피" target="_blank">
-            <button type='submit'>Search</button>
+            <button type='submit'>검색</button>
             </a>
         </div>
     </div>
     
-    
+    <a class="my">My Fridge</a>
     
     <div class="recipe-posts">
         {% for post, date in post_dict.items %}
