@@ -78,9 +78,9 @@ def codetail(request, copost_pk):
     return render(request,'codetail.html', { 'copost' : copost })
 
 def coedit(request, copost_pk):
-    copost = Copost.objests.get(pk = copost_pk)
+    copost = Copost.objects.get(pk = copost_pk)
     if request.method == "POST":
-        form = Copostform(request.POST, instance = copost)
+        form = CopostForm(request.POST, instance = copost)
         form.save()
         return redirect('codetail', copost.pk)
     else:
@@ -89,16 +89,19 @@ def coedit(request, copost_pk):
 
 def codelete(request, copost_pk):
     copost = Copost.objects.get(pk = copost_pk)
-    copost.codelete()
+    copost.delete()
     return redirect('cohome')
 
     
 def recipe(request):
     posts = Post.objects.all()
     food_list = request.POST.getlist('chk_info')
+    foods = ''
+    for food in food_list:
+        foods = foods + food + '+'
     return render(request, 'recipe.html', {
         'posts':posts,
-        'food_list':food_list
+        'foods':foods
     })
 
 def post_list(request):
