@@ -22,10 +22,13 @@ class Post(models.Model):
         max_length=200,
     )
     memo = models.TextField()
-
+    tag_set=models.ManytoManyField('Tag', blank=True)
 
     def __str__(self):
         return self.name
+
+class Tag(models.Model):
+    name = models.CharField(max_length=140, unique=True)
 
 class Copost(models.Model):
     cotitle = models.CharField(max_length=200)
