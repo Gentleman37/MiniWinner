@@ -1,21 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}  
-<div class="recipe-">
-    <form method = 'POST' action = ''>{% csrf_token %}
-        {% for post in posts%}
-        <input type="checkbox" name="chk_info" value="{{post.name}}" {% if post.name in food_list %} checked {% endif %}>{{post.name}}<br>
-        {% endfor %}
-        <input type = 'submit' value="체크완료" />
-    </form>
-    <a href="https://terms.naver.com/search.nhn?query={{foods}}레시피" target="_blank">
-    <button type='submit'>show available recipes</button>
-    </a>
-</div>
-<div class="recipe-posts">
-    {%for post in posts%}
-        <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
-        <h2><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
-    {%endfor%}
+<div class="recipe-box">
+
+    <div class="recipe-search">
+    <h3>요리법 찾기</h3>
+        <form method = 'POST' action = ''>{% csrf_token %}
+            <div class="recipe-checkbox">
+                {% for post in posts%}
+                <div>
+                    <input type="checkbox" name="chk_info" value="{{post.name}}" {% if post.name in food_list %} checked {% endif %}>{{post.name}}<br>
+                </div>
+                {% endfor %}
+                <input type = 'submit' value="체크완료" />
+            </div>
+        </form>
+        <div class="recipe-toggle-button">
+            <a href="https://terms.naver.com/search.nhn?query={{foods}}레시피" target="_blank">
+            <button type='submit'>Search</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="recipe-posts">
+        {%for post in posts%}
+        <div class="recipe-images">
+            <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
+            <h3><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h3>
+        </div>
+        {%endfor%}
+    </div>
+
 </div>
 {% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
 
