@@ -1,0 +1,10 @@
+.IDPASS {
+    margin-top: 20%;
+    text-align: center;
+}
+
+.background{
+    background-image: url('syd-wachs-120739-unsplash.jpg');
+    background-size: cover;
+    
+}
