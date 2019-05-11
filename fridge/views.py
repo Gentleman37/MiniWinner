@@ -8,7 +8,13 @@ from django.contrib import auth
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    posts = Post.objects.all()
+    food_list = request.POST.getlist('chk_info')
+    foods = ''
+    for food in food_list:
+        foods = foods + food + '+'
+    return render(request, 'home.html', {'posts':posts,'foods':foods,
+    'food_list':food_list })
 
 def new(request):
     if request.method == 'POST':
@@ -104,6 +110,7 @@ def recipe(request):
         'foods':foods,
         'food_list':food_list
     })
+
 
 def post_list(request):
     post_list = Post.objects.prefetch_related('tag_set').select_related('author__profile').all()
