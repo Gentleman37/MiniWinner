@@ -10,8 +10,8 @@
         </div>
         <div class="return">
             <a href="{% url 'home' %}">내 냉장고로 돌아가기</a>
-            <a href="{% url 'edit' %}">게시물 수정하기</a>
-            <a href="#">게시물 삭제하기</a>
+            <a href="{% url 'edit' post.pk %}">게시물 수정하기</a>
+            <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
         </div>
 
     {% endblock content %}
