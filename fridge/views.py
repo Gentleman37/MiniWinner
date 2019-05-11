@@ -4,7 +4,7 @@ from .models import Post, Copost
 from django.contrib.auth.models import User
 from django.contrib import auth
 from datetime import datetime
-
+from django.contrib.auth import login, authenticate
 
 # Create your views here.
 def home(request):
@@ -66,7 +66,26 @@ def delete(request, post_pk):
 
 def about(request):
     return render(request, 'about.html')
-    
+
+
+
+def login(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username = username, password = password)
+        if user is not None:
+        
+            return redirect('home')
+        else:
+            form = UserForm()
+            error = "잘못된 아이디입니다."
+            return render(request, 'registration/login.html', {'form': form, 'error': error})
+    else:
+        form = UserForm()
+        return render(request, 'registration/login.html', {'form': form})
+
 def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)

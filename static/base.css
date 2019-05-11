@@ -124,7 +124,7 @@ body{
   margin-top: 10px;
 }
 .contents p{
-  margin:0;
+  margin: 0;
 }
 .contents span{
   font-weight: 700;
@@ -196,35 +196,43 @@ body{
 }
  
 /* new.html */
-.nameform input {
-  width: 500px;
+.new_box{
+  margin-top: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* recipe.html */
 .recipe-box {
   margin: 0 7%;
-  background-color: rgba(207, 207, 207, 0.13);
+
 }
 .recipe-search {
+  background-color: bisque;
   margin-top: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .recipe-search form {
+  background-color: aqua;
   width: 65%;
   display: flex;
   justify-content: space-around;
 }
 .recipe-checkbox {
+  background-color: blue;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .recipe-checkbox div {
+  background-color: blueviolet;
   margin: 0 10px;
 }
 .recipe-toggle-button {
@@ -237,12 +245,13 @@ body{
 }
 
 .recipe-posts {
-  display: grid;
+  background-color: aquamarine;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 5px;
+  width: 90%;
+  margin: 2% auto;
 }
 .recipe-images {
   height: 400px;
@@ -264,24 +273,33 @@ body{
   align-items: center;
 }
 .dldlk{
-  margin-top: 225px;
+  margin-top: 200px;
   margin-bottom: auto;
   text-align: center;
+  margin-bottom: 250px;
 }
 
 .about_logo_img{
   width: 1020px;
   height: 480px;
+  margin: 100px;
 }
 
 .about_logo_name{
+  font-family:'Lobster', cursive;
   margin-top: 100px;
   font-size: 50px;
 }
 
 .about_explan{
+  font-family: 'Nanum Gothic', sans-serif;
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 28px;
+
+}
+.about_explan1{
+  font-size: 130%;
+  opacity: 0.6;
 }
 
 /* edit.html */
