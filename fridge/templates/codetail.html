@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
     {% block content %}
-    <img src="{static 'comunity.jpg'}" id="bg" alt="">
     
     <div class = 'codetail'>
+<<<<<<< HEAD
+        <div class = 'codetail_content'>
+            <div class = 'gg'>
+                <h2>{{ copost.cotitle }}</h2>
+                <h5>{{ copost.cocontents }}</h5>
+            </div>
+            <div class = 'made'>
+                <img src="{% static 'jjj.jpg' %}" alt="">
+            </div> 
+
+        </div>
+        <div class = 'codetail_return'>
+            <a href="{% url 'cohome' %}">글 목록으로 돌아가기</a><br>
+            <a href="{% url 'coedit' copost.pk %}">수정하기</a><br>
+            <a href="{% url 'codelete' copost.pk %}">삭제하기</a>
+        </div>
+=======
     <div class = 'codetail_content'>
     <h2>{{ copost.cotitle }}</h2>
     <h2>{{ copost.user_name }}</h2>
@@ -13,6 +30,7 @@
     <a href="{% url 'coedit' copost.pk %}">수정하기</a><br>
     <a href="{% url 'codelete' copost.pk %}">삭제하기</a>
     </div>
+>>>>>>> 32c844a18cae570cb2d4eff2e14463cadfa8ec42
     </div>
 {% endblock content %}
 

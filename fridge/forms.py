@@ -6,9 +6,6 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-<<<<<<< HEAD
-        fields = ('name','family', 'date', 'month', 'year', 'img',)
-=======
         fields = ('name', 'family', 'date', 'month', 'year', 'img', )
 
         labels = {
@@ -26,7 +23,6 @@ class PostForm(forms.ModelForm):
                 'size':'20'
             })
         }
->>>>>>> b320db2d0e3841836c050db2fbe6607de48c1e9c
 
 
 class UserForm(forms.ModelForm):
