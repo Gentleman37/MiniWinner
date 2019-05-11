@@ -1,5 +1,8 @@
 .IDPASS {
-    margin-top: 20%;
+    width: 30%;
+    padding: 2rem 3rem;
+    background: rgba(255,255,255, 0.7);
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -7,6 +10,13 @@
     background-image: url('peter-wendt-123928-unsplash.jpg');
     background-size: cover;
     
+}
+
+.background form{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 
 h2{

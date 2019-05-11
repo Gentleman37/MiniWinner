@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel = 'stylesheet' href = "{%static 'base.css' %}?v=0.7"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Nanum+Gothic|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>MR.Fridge</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
             <div class="navitem"><a href="{% url 'new' %}">NEW</a></div>
             <div class="navitem"><a href="{% url 'recipe' %}">레시피</a></div>
             <div class="navitem"><a href="{% url 'cohome' %}">커뮤니티</a></div>
+            <div class="navitem"><a href="{% url 'logout' %}">로그아웃</a></div>
         </div>
     </div>
     {% block content %}
