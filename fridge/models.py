@@ -6,7 +6,7 @@ from django.utils import timezone
 # Create your models here.
 class Post(models.Model):
     name = models.CharField(max_length=200)
-    exp_date = models.DateTimeField(max_length=200, default=timezone.now)
+    exp_date = models.ChoiceField(max_length=200, default=timezone.now)
     img = models.FileField(null=True)
     family_choices=(
         ("과일", '과일'),

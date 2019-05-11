@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 django = "*"
-djanog = "*"
+django = "*"
 django-storages = "*"
 boto3 = "*"
 
