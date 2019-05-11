@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import PostForm, UserForm
-from .models import Post 
+from .forms import PostForm, UserForm, CopostForm
+from .models import Post, Copost 
 from django.contrib.auth.models import User
 from django.contrib import auth
 
@@ -32,3 +32,39 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'registration/signup.html', {'form': form} )
+
+
+def cohome(request):
+    coposts = Copost.objects.all()
+    return render(request, 'cohome,html', {'coposts' : coposts})
+
+
+def conew(request):
+   if request.method == 'POST':
+        form = CopostForm(request.POST)
+        copost = form.save(commit=False)
+        form.save()
+        return redirect('codetail', copost.pk)
+    else:
+        form = CopostForm()
+        return render(request,'conew.html', { 'form' : form })
+
+def codetail(request, copost_pk):
+    copost = Copost.objects.get(pk=copost_pk)
+    return render(request,'codetail.html', { 'copost' : copost })
+
+def coedit(request, copost_pk):
+    copost = Copost.objests.det(pk = copost._pk)
+    if request.method == "POST":
+        form = Copostform(request.POST, instance = copost)
+        form.save()
+        return redirect('codetail', copost.pk)
+    else:
+        form = CopostForm(instance = copost)
+    return render(request, 'coedit.html', { 'form' : form })
+
+def codelete(request, copost_pk):
+    copost = Copost.objects.get(pk = copost_pk)
+    copost.codelete()
+    return redirect('cohome')
+    
