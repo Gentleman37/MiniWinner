@@ -12,7 +12,7 @@ def new(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         post = form.save(commit=False)
-        form.save()
+        post.save()
         return redirect('detail', post.pk)
     else:
         form = PostForm()
