@@ -14,12 +14,16 @@
             <div class="info">
                 <h2>{{ post.name }}</h2>
                 <h4>{{ post.family }}</h4>
-                <h4>{{ exp_date }}</h4>
+                {% if exp_date >= 0 %}
+                <h4>{{ exp_date }}일 남았습니다.</h4>
+                {%else%}
+                <h4>유통기한 만기</h4>
+                {% endif %}
             </div>
 
             <div class="return">
 
-                <a href="{% url 'edit' post.pk %}">게시물 수정하기</a>
+                <a href="{% url 'edit' post.pk %}">게시물 수정하기</a><br>
                 <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
             </div>
         </div>
