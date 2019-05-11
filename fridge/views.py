@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from datetime import datetime
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home(request):
@@ -23,7 +24,7 @@ def home(request):
     post_dict = dict(zip(posts, date_list))
     return render(request, 'home.html', {'posts':posts, 'post_dict':post_dict })
 
-
+@login_required
 def new(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
