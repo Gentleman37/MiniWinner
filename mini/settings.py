@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fridge.apps.FridgeConfig',
-    # 'storages',
+    'storages',
 ]
 
 MIDDLEWARE = [
