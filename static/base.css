@@ -258,6 +258,30 @@ body{
 }
 
 /* about.html */
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dldlk{
+  margin-top: 225px;
+  margin-bottom: auto;
+  text-align: center;
+}
 
+.about_logo_img{
+  width: 1020px;
+  height: 480px;
+}
+
+.about_logo_name{
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+.about_explan{
+  margin-top: 50px;
+  font-size: 30px;
+}
 
 /* edit.html */
