@@ -9,7 +9,7 @@ from datetime import datetime
 # Create your views here.
 def home(request):
     posts = Post.objects.all()
-    
+
     date_list = []
     for post in posts:
         year = int(post.year)
