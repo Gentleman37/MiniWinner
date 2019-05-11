@@ -73,7 +73,7 @@ def codetail(request, copost_pk):
     return render(request,'codetail.html', { 'copost' : copost })
 
 def coedit(request, copost_pk):
-    copost = Copost.objests.det(pk = copost_pk)
+    copost = Copost.objests.get(pk = copost_pk)
     if request.method == "POST":
         form = Copostform(request.POST, instance = copost)
         form.save()
