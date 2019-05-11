@@ -11,9 +11,9 @@
     <div class="navbar">
         <h1><a href="{% url 'home' %}">HOME</a>
         <div class="navitem"><a href="#">{{user.username}}님의 냉장고</a></div>>
-        <div class="navitem"><a href="#">ABOUT</a></div>
-        <div class="navitem"><a href="#">NEW</a></div>>
-        <div class="navitem"><a href="#">레시피</a></div>>
+        <div class="navitem"><a href="{% url 'about' %}">ABOUT</a></div>
+        <div class="navitem"><a href="{% url 'new' %}">NEW</a></div>>
+        <div class="navitem"><a href="{% url 'recipe' %}">레시피</a></div>>
     </div>
     {% block content %}
     {% endblock content %}

@@ -25,6 +25,7 @@ urlpatterns = [
     path('accounts/signup', views.signup, name='signup'),
     path('cohome/', views.cohome, name = 'cohome'),
     path('conew/', views.conew, name='conew'),
+    path('detail/', views.detail, name="detail2"),
     path('codetail/<int:copost_pk>/', views.codetail, name='codetail'),
     path('coedit/<int:copost_pk>/', views.coedit, name = 'coedit'),
     path('codelete/<int:copost_pk>/', views.codelete, name = 'codelete'),
@@ -33,4 +34,5 @@ urlpatterns = [
     path('edit/<int:post_pk>/', views.edit, name='edit'),
     path('delete/<int:post_pk>/', views.delete, name='delete'),
     path('about/', views.about, name = 'about'),
+    path('new/', views.new, name = 'new')
 ]
