@@ -10,19 +10,22 @@
         </div>
     </div>
     <div class="home_p2">
-
         {% for post, date in post_dict.items %}
             {% if date < 0 %}
                 <div class="contents">
-                    <a href = "{% url 'detail' post.pk %}"><img src ="static/default.jpg"/></a><br>        
-                    <h2><a href = "{% url 'detail' post.pk %}">>{{post.name}}</a><br>{{post.family}}</h2>
-                    <h4>{{ date }}일 지났습니다! 버리세요!</h4>
+                    <a href = "{% url 'detail' post.pk %}"><img src ="{{ post.img.url }}"/></a><br>
+                    <div class="content_info">        
+                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br> <span>분류: </span>{{post.family}}</p>
+                        <p class="date1">{{ date }}일 지났습니다! 버리세요!</p>
+                    </div>
                 </div>
             {% else %}
                 <div class="contents">
-                    <a href = "{% url 'detail' post.pk %}"><img src ="static/default.jpg"/></a><br>        
-                    <h2><a href = "{% url 'detail' post.pk %}">>{{post.name}}</a><br>{{post.family}}</h2>
-                    <h4>{{ date }}일 남았습니다</h4>
+                    <a href = "{% url 'detail' post.pk %}"><img src ="{{ post.img.url }}"/></a><br> 
+                    <div class="content_info">        
+                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br> <span>분류: </span>{{post.family}}</p>
+                        <a class="date2">{{ date }}일 남았습니다</a>
+                    </div>
                 </div>
             {% endif %}
         {% endfor %}
