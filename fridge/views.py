@@ -99,5 +99,6 @@ def recipe(request):
         foods = foods + food + '+'
     return render(request, 'recipe.html', {
         'posts':posts,
-        'foods':foods
+        'foods':foods,
+        'food_list':food_list
     })
