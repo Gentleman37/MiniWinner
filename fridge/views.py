@@ -59,7 +59,7 @@ def cohome(request):
 
 
 def conew(request):
-   if request.method == 'POST':
+    if request.method == 'POST':
         form = CopostForm(request.POST)
         copost = form.save(commit=False)
         form.save()
