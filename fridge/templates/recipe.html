@@ -20,14 +20,18 @@
             </a>
         </div>
     </div>
-    <h1>{{ final_date }}</h1>
+    
+    
+    
     <div class="recipe-posts">
-        {%for post in posts%}
+        
+        {% for post, date in post_dict.items %}
         <div class="recipe-images">
             <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
             <h3><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h3>
+            <h4>{{ date }}일 남았습니다</h4>
         </div>
-        {%endfor%}
+        {% endfor %}
     </div>
 
 </div>
