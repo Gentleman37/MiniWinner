@@ -92,11 +92,10 @@ class Post(models.Model):
         max_length=200,
     )
     memo = models.TextField()
-    
-    
+    tag = models.CharField(max_length=10, default='#')
+
     def __str__(self):
         return self.name
-
 
 
 class Copost(models.Model):
