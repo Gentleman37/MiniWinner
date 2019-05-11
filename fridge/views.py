@@ -16,7 +16,6 @@ def new(request):
         form = PostForm()
     return render(request, 'new.html', { 'form' : form })
 
-<<<<<<< HEAD
 def detail(request, post_pk):
     post = Post.objects.get(pk = post_pk)
     return render(request, 'detail.html',{ 'post' : post })
@@ -38,9 +37,6 @@ def delete(request, post_pk):
 
 
 
-=======
-
-
 def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
@@ -55,4 +51,3 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'registration/signup.html', {'form': form} )
->>>>>>> 665575f7ccc53a838e0b4aecf1e7d27a27e0307f
