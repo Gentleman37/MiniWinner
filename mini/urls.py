@@ -22,7 +22,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup', views.signup, name='signup'),
     path('cohome/', views.cohome, name = 'cohome'),
-    path('conew/', views.conew, name='conew')
+    path('conew/', views.conew, name='conew'),
     path('codetail/<int:copost_pk>/', views.codetail, name='codetail'),
     path('coedit/<int:copost_pk>/', views.coedit, name = 'coedit'),
     path('codelete/<int:copost_pk>/', views.codelete, name = 'codelete'),
