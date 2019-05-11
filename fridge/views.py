@@ -35,6 +35,8 @@ def delete(request, post_pk):
     post.delete()
     return redirect('home')
 
+
+
 def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
