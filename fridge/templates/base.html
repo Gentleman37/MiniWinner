@@ -12,7 +12,7 @@
 <body>
 
     <div class="navbar">
-        <div class="logo"><a href="{% url 'home' %}"><img src="static/logo1.png" width=170px ></div>
+        <div class="logo"><a href="{% url 'home' %}"><img src= "{% static 'logo1.png' %}" width=170px ></div>
         <div class="items">
             <div class="navitem"><a href="{% url 'home' %}">{{ user.username }}님의 냉장고</a></div>
             <div class="navitem"><a href="{% url 'about' %}">ABOUT</a></div>
