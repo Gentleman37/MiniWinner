@@ -85,13 +85,16 @@ def signup(request):
 def cohome(request):
     coposts = Copost.objects.all()
     post_list = []
-    tag = str(Post.tag)
     co_contents = []
     for copost in coposts:
         post_list.append(copost.cocontents)
-    
-    return render(request, 'cohome.html', {'coposts' : coposts, 'post_list':post_list, 'tag':tag})
+    return render(request, 'cohome.html', {'coposts' : coposts, 'post_list':post_list})
 
+
+def cohomewithtag(request, copost_tag):
+    tag = copost_tag
+    coposts = Copost.obejcts.get(str=copost_tag)
+    return render(request, 'cohome.html', {'coposts':coposts, 'tag':tag})
 
 def conew(request):
     if request.method == 'POST':

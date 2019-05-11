@@ -2,11 +2,12 @@
     {% block content %}
     <h1>코-뮤니티</h1>
     <h2> 글 목록 </h2>
-    {% if tag in post_list %}
+    {% if tag %}
+    {{tag}}
+    {% endif%}
     {% for copost in coposts %}
         <li><a href="{% url 'codetail' copost.pk %}">{{ copost.cotitle }}</a></li><br>
     {% endfor %}
-    {% endif %}
         <a href="{% url 'conew' %}">글쓰기</a>
 {% endblock content %}
 </body>
