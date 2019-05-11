@@ -6,7 +6,6 @@
     <div class = 'detail'>
         <div class = 'left'>
             <img src="{{ post.img.url }}" />
-
         </div>
 
         <div class = 'right'>
@@ -33,8 +32,8 @@
                     <a href="{% url 'delete' post.pk %}"><button>갖다버리기</button></a>
                     {% endif %}
                 </div>
-            </div>
         </div>
+    </div>
     </div>
     {% endblock %}
 
