@@ -15,7 +15,7 @@
                 <div class="contents">
                     <a href = "{% url 'detail' post.pk %}"><img src ="{{ post.img.url }}"/></a><br>
                     <div class="content_info">        
-                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br> <span>분류: </span>{{post.family}}</p>
+                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br><br> <span>분류: </span>{{post.family}}</p><br>
                         <p class="date1">{{ date }}일 지났습니다! 버리세요!</p>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="contents">
                     <a href = "{% url 'detail' post.pk %}"><img src ="{{ post.img.url }}"/></a><br> 
                     <div class="content_info">        
-                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br> <span>분류: </span>{{post.family}}</p>
+                        <p><a href = "{% url 'detail' post.pk %}"> <span>이름: </span>{{post.name}}</a><br><br> <span>분류: </span>{{post.family}}</p><br>
                         <a class="date2">{{ date }}일 남았습니다</a>
                     </div>
                 </div>

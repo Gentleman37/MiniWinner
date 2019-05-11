@@ -190,7 +190,12 @@ body{
 }
  
 /* new.html */
-
+.new_box{
+  margin-top: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* recipe.html */
 .recipe-box {
