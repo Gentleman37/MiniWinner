@@ -8,6 +8,22 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('name', 'family', 'date', 'month', 'year', 'img', )
 
+        labels = {
+            'name':'이름',
+            'family':'카테고리',
+            'date':'구매일',
+            'month':'',
+            'year':'',
+            'img':'사진업로드'
+        }
+
+        widgets = {
+            'name':forms.TextInput(attrs={
+                'placeholder':' 무엇을 사셨나요?',
+                'size':'20'
+            })
+        }
+
 
 class UserForm(forms.ModelForm):
     class Meta:
