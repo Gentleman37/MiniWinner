@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}  
     {%for post in posts%}
-        <img src = "{{ post.img.url }}"/><br>        
+        <a href = "{%url 'detail' %}"><img src = "{{ post.img.url }}"/></a><br>        
         <h2><a href = "{%url 'detail' post.pk%} ">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family_choices}}</h2>
     {%endfor%}
 
-    <form method = 'post' action = '#'>
+    <form method = '#' action = '#'>
     {% for %}
-    <input type="checkbox" name="chk_info" value="{{}}">{{}}
+    <input type="checkbox" name="chk_info" value="{{post.name}}">{{post.name}}<br>
     {% endfor %}
-    <input type = 'submit' />
+    <input type = 'submit'>check complete
     </form>
+
+    <a href= "#">show available recipes</a>
 {% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
+
 {% endblock content %}
 </body>
 </html>
