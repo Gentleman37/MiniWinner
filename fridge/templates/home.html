@@ -1,13 +1,20 @@
 
 {% extends 'base.html' %}
     {% block content %}
-   
-    <h1>첫 화면입니다!</h1>
+    <div class="home_p1">
+        <div class="home_text">
+            <a class="hello1">For Your<br> Clean Fridge!</a>
+            <p class="hello2">당신의 냉장고를 깔끔하게 유지하세요! <span>Mr.Fridge</span> 가 유통기한을 지켜드립니다<br>
+            세상의 모든 레시피로 죽어가는 재료들을 구해주세요!</p>
+        </div>
+    </div>
+    <div class="home_p2">
 
         {%for post in posts%}
-           
-            <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
-            <h2><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
-        
+            <div class="contents">
+                <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
+                <h2><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
+            </div>
         {%endfor%}
+    </div>
     {% endblock content %}
