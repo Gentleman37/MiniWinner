@@ -6,7 +6,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('name', 'family', 'date', 'month', 'year', 'img', 'tag',)
+        fields = ('name','family', 'date', 'month', 'year', 'img',)
 
 
 class UserForm(forms.ModelForm):
@@ -23,4 +23,4 @@ class UserForm(forms.ModelForm):
 class CopostForm(forms.ModelForm):
     class Meta:
         model = Copost
-        fields = ('cotitle', 'cocontents',)
+        fields = ('cotitle', 'user_name', 'cocontents',)
