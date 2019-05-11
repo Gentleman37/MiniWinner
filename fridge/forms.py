@@ -16,3 +16,7 @@ class UserForm(forms.ModelForm):
         widgets = {'password': forms.PasswordInput()}
 
 
+class CopostForm(forms.ModelForm):
+    class Meta:
+        model = Copsot
+        fields = ('cotitle', 'cocontents',)
