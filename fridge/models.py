@@ -91,15 +91,9 @@ class Post(models.Model):
         default = "2019",
         max_length=200,
     )
-<<<<<<< HEAD
-    memo = models.TextField()
-    tag = models.CharField(max_length=10, default='#')
-
-=======
     memo = models.TextField(max_length = 200)
     
     
->>>>>>> 8feaf94fbedce64f6d1d7553f4cb782420962518
     def __str__(self):
         return self.name
 
