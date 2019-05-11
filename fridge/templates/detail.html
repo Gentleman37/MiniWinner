@@ -1,20 +1,30 @@
 {% extends 'base.html' %}
     {% block content %}
-        <h1> {{ post.name }}의 상세정보 </h1>
-        <div class="info">
-            <h2>{{ post.name }}</h2>
-            <h4>{{ post.exp_date }}</h4>
-            <h4>{{ post.family }}</h4>
+    <div class = 'dldl'>
+    <div class = 'detail'>
+        <div class = 'left'>
             <img src="{{ post.img.url }}" />
-        </div>
-        <div class="return">
-            <a href="#">내 냉장고로 돌아가기</a>
-            <a href="#">게시물 수정하기</a>
-            <a href="#">게시물 삭제하기</a>
+
         </div>
 
-    {% endblock content %}
-  
+        <div class = 'right'>
+            <div class = "detail_name_box">
+                <h1 class = 'detail_name' > {{ post.name }}<br>상세정보 </h1>
+            </div>
+            <div class="info">
+                <h2>{{ post.name }}</h2>
+                <h4>{{ post.family }}</h4>
+                <h4>{{ exp_date }}</h4>
+            </div>
+
+            <div class="return">
+
+                <a href="{% url 'edit' post.pk %}">게시물 수정하기</a>
+                <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 
 </body>
 </html>

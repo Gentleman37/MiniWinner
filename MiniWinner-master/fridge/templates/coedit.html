@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>게시물 수정하기!</h1>
+    <h1>수정하기 !</h1>
     <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit"> 수정하기 </button>
+    <button type="submit">수정 !</button>
+    </form>
 {% endblock content %}
+</body>
+</html>

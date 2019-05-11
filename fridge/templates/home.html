@@ -9,6 +9,7 @@
         </div>
     </div>
     <div class="home_p2">
+
         {%for post in posts%}
             <div class="contents">
                 <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        

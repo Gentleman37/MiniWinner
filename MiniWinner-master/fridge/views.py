@@ -3,19 +3,12 @@ from .forms import PostForm, UserForm, CopostForm
 from .models import Post, Copost 
 from django.contrib.auth.models import User
 from django.contrib import auth
-from datetime import datetime
+
 
 
 # Create your views here.
 def home(request):
-    posts = Post.objects.all()
-    food_list = request.POST.getlist('chk_info')
-    foods = ''
-    for food in food_list:
-        foods = foods + food + '+'
-    return render(request, 'home.html', {'posts':posts,'foods':foods,
-    'food_list':food_list })
-
+    return render(request, 'home.html')
 
 def new(request):
     if request.method == 'POST':
@@ -29,30 +22,20 @@ def new(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk = post_pk)
-
-    year = int(post.year)
-    month = int(post.month)
-    date = int(post.date)
-
-    time_buy = datetime(year, month, date)
-    time_now = datetime.now()
-
-    exp_date = (time_buy - time_now).days
-    return render(request, 'detail.html',{ 'post' : post, 'exp_date': exp_date })
-
+    return render(request, 'detail.html',{ 'post' : post })
 
 def edit(request, post_pk):
     post = Post.objects.get(pk = post_pk)
     if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, instance = post)
         form.save()
         return redirect('detail', post.pk)
     else:
-        form = PostForm(instance=post)
+        form = PostForm( instance = post )
     return render(request, 'edit.html', {'form' : form })
 
 def delete(request, post_pk):
-    post = Post.objects.get(pk=post_pk)
+    post = Post.objects.get(pk = post_pk)
     post.delete()
     return redirect('home')
 
@@ -119,10 +102,8 @@ def recipe(request):
     return render(request, 'recipe.html', {
         'posts':posts,
         'foods':foods,
-        'food_list':food_list,
-        'final_date':final_date
+        'food_list':food_list
     })
-
 
 def post_list(request):
     post_list = Post.objects.prefetch_related('tag_set').select_related('author__profile').all()
