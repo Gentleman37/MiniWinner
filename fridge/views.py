@@ -30,18 +30,15 @@ def new(request):
 def detail(request, post_pk):
     post = Post.objects.get(pk = post_pk)
 
-    year = int(Post.year)
-    month = int(Post.month)
-    date = int(Post.date)
+    year = int(post.year)
+    month = int(post.month)
+    date = int(post.date)
 
     time_buy = datetime(year, month, date)
     time_now = datetime.now()
 
-    print(time_buy)
-    print(time_now)
-
-    print((time_buy - time_now).days, '일 남았습니다.')
-    return render(request, 'detail.html',{ 'post' : post })
+    exp_date = (time_buy - time_now).days
+    return render(request, 'detail.html',{ 'post' : post, 'exp_date': exp_date })
 
 
 def edit(request, post_pk):

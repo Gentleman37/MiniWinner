@@ -6,7 +6,7 @@
             <img src="{{ post.img.url }}" />
 
         </div>
-<<<<<<< HEAD
+
         <div class = 'right'>
             <div class = "detail_name_box">
                 <h1 class = 'detail_name' > {{ post.name }}<br>상세정보 </h1>
@@ -14,25 +14,15 @@
             <div class="info">
                 <h2>{{ post.name }}</h2>
                 <h4>{{ post.family }}</h4>
-                <h4>{{ post.exp_date }}</h4>
+                <h4>{{ exp_date }}</h4>
             </div>
+
             <div class="return">
-            <a href="#">내 냉장고로 돌아가기</a><br>
-            <a href="#">게시물 수정하기</a><br>
-=======
-        <div class="return">
-            <a href="{% url 'home' %}">내 냉장고로 돌아가기</a>
-<<<<<<< HEAD
-            <a href="{% url 'edit' %}">게시물 수정하기</a>
->>>>>>> 4a6d16ebb6e29a27a24a009b73d558516467c5ad
-            <a href="#">게시물 삭제하기</a>
+
+                <a href="{% url 'edit' post.pk %}">게시물 수정하기</a>
+                <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
             </div>
-=======
-            <a href="{% url 'edit' post.pk %}">게시물 수정하기</a>
-            <a href="{% url 'delete' post.pk %}">게시물 삭제하기</a>
->>>>>>> 121c7eb065b3e8757755ca92c7c82d6b4272b58c
         </div>
-    </div>
     </div>
     {% endblock %}
 
