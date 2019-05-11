@@ -22,7 +22,7 @@ def detail(request, post_pk):
 
 def edit(request, post_pk):
     post = Post.objects.get(pk = post_pk)
-    if request.method = "POST":
+    if request.method == "POST":
         form = PostForm(request.POST, instance = post)
         form.save()
         return redirect('detail', post.pk)
