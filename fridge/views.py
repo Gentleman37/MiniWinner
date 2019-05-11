@@ -58,7 +58,7 @@ def signup(request):
 
 def cohome(request):
     coposts = Copost.objects.all()
-    return render(request, 'cohome,html', {'coposts' : coposts})
+    return render(request, 'cohome.html', {'coposts' : coposts})
 
 
 def conew(request):
