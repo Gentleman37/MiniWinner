@@ -12,8 +12,8 @@
 
         {%for post in posts%}
             <div class="contents">
-                <a href = "{%url 'detail' post.pk%}"><img src = "{{ post.img.url }}"/></a><br>        
-                <h2><a href = "{%url 'detail' post.pk%}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
+                <a href = "{% url 'detail' post.pk %}"><img src ="static/default.jpg"/></a><br>        
+                <h2><a href = "{% url 'detail' post.pk %}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
             </div>
         {%endfor%}
     </div>
