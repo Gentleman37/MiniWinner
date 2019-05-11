@@ -147,7 +147,8 @@ body{
 
 /* recipe.html */
 .recipe-box {
-  margin: 10px 10%;
+  margin: 0 7%;
+  background-color: rgba(207, 207, 207, 0.13);
 }
 .recipe-search {
   margin-top: 2%;

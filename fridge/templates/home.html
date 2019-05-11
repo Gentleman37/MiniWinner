@@ -1,5 +1,6 @@
-
 {% extends 'base.html' %}
+
+{% load staticfiles %}
     {% block content %}
     <div class="home_p1">
         <div class="home_text">
@@ -12,7 +13,7 @@
 
         {%for post in posts%}
             <div class="contents">
-                <a href = "{% url 'detail' post.pk %}"><img src ="static/default.jpg"/></a><br>        
+                <a href = "{% url 'detail' post.pk %}"><img src ="{% static 'default.jpg' %}"/></a><br>        
                 <h2><a href = "{% url 'detail' post.pk %}">>{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
             </div>
         {%endfor%}
