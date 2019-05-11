@@ -91,7 +91,7 @@ class Post(models.Model):
         default = "2019",
         max_length=200,
     )
-    memo = models.TextField()
+    memo = models.TextField(max_length = 200)
     
     
     def __str__(self):

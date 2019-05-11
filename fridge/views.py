@@ -36,6 +36,7 @@ def new(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk = post_pk)
+    memo = Post.objects.get(pk = post_pk)
 
     year = int(post.year)
     month = int(post.month)
@@ -45,7 +46,7 @@ def detail(request, post_pk):
     time_now = datetime.now()
 
     exp_date = (time_buy - time_now).days
-    return render(request, 'detail.html',{ 'post' : post, 'exp_date': exp_date })
+    return render(request, 'detail.html',{ 'post' : post, 'exp_date': exp_date, 'memo':memo })
 
 
 def edit(request, post_pk):
