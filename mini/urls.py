@@ -14,17 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-<<<<<<< HEAD
-from django.urls import path
-from fridge import views
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('detail/<int:post_pk>/', views.detail, name='detail'),
-    path('edit/<int:post_pk>/', views.eidt, name='edit'),
-    paht('delete/<int:post_pk>/', views.delete, name='delete'),
-=======
 from django.urls import path, include
 from fridge import views
 
@@ -33,6 +22,8 @@ urlpatterns = [
     path('accounts/', include('djagno.contrib.auth.urls')),
     path('accounts/signup', view.signup, name='signup'),
     path('recipe/', views.recipe, name = 'recipe'), 
-    path('about/', name = 'about')
->>>>>>> 665575f7ccc53a838e0b4aecf1e7d27a27e0307f
+    path('about/', name = 'about'),    
+    path('detail/<int:post_pk>/', views.detail, name='detail'),
+    path('edit/<int:post_pk>/', views.eidt, name='edit'),
+    paht('delete/<int:post_pk>/', views.delete, name='delete'),
 ]
