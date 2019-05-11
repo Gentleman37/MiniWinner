@@ -10,7 +10,7 @@
     <h1>코-뮤니티</h1>
     <h2> 글 목록 </h2>
     {% for copost in coposts %}
-        <li><a href="{% url 'detail' copost.pk %}">{{ copost.cotitle }}</a></li><br>
+        <li><a href="{% url 'codetail' copost.pk %}">{{ copost.cotitle }}</a></li><br>
     {% endfor %}
         <a href="{% url 'conew' %}">글쓰기</a>
 </body>
