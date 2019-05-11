@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Copost
 from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
@@ -18,5 +18,5 @@ class UserForm(forms.ModelForm):
 
 class CopostForm(forms.ModelForm):
     class Meta:
-        model = Copsot
+        model = Copost
         fields = ('cotitle', 'cocontents',)
