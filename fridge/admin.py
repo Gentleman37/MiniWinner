@@ -1,5 +1,5 @@
 from django.contrib import admin
-from fridge.models import Post
-
+from .models import Post, Copost
 # Register your models here.
+
 admin.site.register(Post)

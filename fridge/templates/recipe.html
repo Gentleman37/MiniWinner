@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}  
+    {%for post in posts%}
+        <a href = "{%url 'detail' %}"><img src = "{{ post.img.url }}"/></a><br>        
+        <h2><a href = "{%url 'detail' post.pk%} ">{{post.name}}</a><br>{{post.exp_date}}<br>{{post.family}}</h2>
+    {%endfor%}
+
+    <form method = '#' action = '#'>
+        {% for post in posts%}
+        <input type="checkbox" name="chk_info" value="{{post.name}}">{{post.name}}<br>
+        {% endfor %}
+        <input type = 'submit'>check complete
+    </form>
+
+    
+    <a {% for food in food_list %} href="https://search.naver.com/search.naver?query={{food}}+레시피" {% endfor %}><button type='submit'>show available recipes</button></a>
+    
+{% comment %} 선택에 따라 chk_info 필드의 값이 결정된다. {% endcomment %}
+
+{% endblock content %}
+</body>
+</html>

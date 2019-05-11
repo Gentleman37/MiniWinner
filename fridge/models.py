@@ -27,5 +27,9 @@ class Post(models.Model):
     def __str__(self):
         return self.name
 
+class Copost(models.Model):
+    cotitle = models.CharField(max_length=200)
+    cocontents = models.TextField()
 
-
+    def __str__(self):
+        return self.cotitle
