@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from fridge import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('detail/<int:post_pk>/', views.detail, name='detail'),
+    path('edit/<int:post_pk>/', views.eidt, name='edit'),
+    paht('delete/<int:post_pk>/', views.delete, name='delete'),
 ]
