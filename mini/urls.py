@@ -19,8 +19,8 @@ from fridge import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('djagno.contrib.auth.urls')),
-    path('accounts/signup', view.signup, name='signup'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup', views.signup, name='signup'),
     path('recipe/', views.recipe, name = 'recipe'), 
     path('about/', name = 'about'),    
     path('detail/<int:post_pk>/', views.detail, name='detail'),
