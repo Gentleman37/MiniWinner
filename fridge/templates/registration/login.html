@@ -16,9 +16,14 @@
         {% if error %}
         {{ error }}
         {% endif %}
-       <div class="IDPASS"> {{ form.as_p }}
-        <input type="submit" value="Login"> 
-        <a href="{% url 'signup' %}"><input type="button" value="signup"></a></div>
+    <div class="IDPASS"> 
+        <div class="loginlabel"><span class="userlabel">Username</span>: {{ form.username }}</div>
+        <div class="loginlabel"><span class="userlabel">Password</span>: {{ form.password }}</div>
+        <div class="login-buttons">
+            <button type="submit">Login</button>
+            <a href="{% url 'signup' %}"><button>Signup</button></a>
+        </div>
+    </div>
     </form>
 
     {% block content %}

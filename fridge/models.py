@@ -101,6 +101,7 @@ class Post(models.Model):
 class Copost(models.Model):
     cotitle = models.CharField(max_length=200)
     cocontents = models.TextField()
+    user_name = models.CharField(max_length=200, default=" ")
     
 
     def __str__(self):

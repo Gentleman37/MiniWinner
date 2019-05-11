@@ -6,7 +6,6 @@
     <div class = 'detail'>
         <div class = 'left'>
             <img src="{{ post.img.url }}" />
-
         </div>
 
         <div class = 'right'>
@@ -24,7 +23,10 @@
                 <h4>{{post.memo}}</h4>
             </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32c844a18cae570cb2d4eff2e14463cadfa8ec42
 
                 <div class="return">
                     <a href="{% url 'edit' post.pk %}"><button>게시물 수정하기</button></a><br>
@@ -34,8 +36,8 @@
                     <a href="{% url 'delete' post.pk %}"><button>갖다버리기</button></a>
                     {% endif %}
                 </div>
-            </div>
         </div>
+    </div>
     </div>
     {% endblock %}
 
