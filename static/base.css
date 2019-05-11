@@ -141,17 +141,16 @@ body{
 }
 
 /* detail.html */
-.dldl{
+.dldl {
   display: flex;
   justify-content: center;
-
+  background: rgba(204, 204, 204, 0.205);
 }
 
 .detail{
   position: absolute;
   width: 650px;
   height: 500px;
- 
   border: black solid 1px;
   background: white;
   display: flex;
@@ -163,6 +162,10 @@ body{
   width: 430px;
   height: 500px;
 }
+.left img {
+  width: 430px;
+  height: 500px;
+}
 
 .right{
   display: flex;
@@ -170,11 +173,11 @@ body{
 }
 
 .detail_name_box{
+  color: rgb(253, 180, 91);
+  display: flex;
   width: 220px;
   height: 100px;
-  border: solid 1px blanchedalmond;
-  border-top: solid 1px black;
-  border-right: solid 1px black;
+  border-bottom: solid 1px rgb(0, 0, 0);
   text-align: center;
   justify-content:center;
 }
@@ -192,7 +195,13 @@ body{
 .return{
   text-align: center;
   margin-top: auto;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+}
+.return button {
+  font-size: 15px;
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 4px;
 }
  
 /* new.html */
