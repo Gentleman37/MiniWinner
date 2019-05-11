@@ -4,7 +4,9 @@
     <div class = 'detail'>
         <div class = 'left'>
             <img src="{{ post.img.url }}" />
+
         </div>
+<<<<<<< HEAD
         <div class = 'right'>
             <div class = "detail_name_box">
                 <h1 class = 'detail_name' > {{ post.name }}<br>상세정보 </h1>
@@ -17,6 +19,11 @@
             <div class="return">
             <a href="#">내 냉장고로 돌아가기</a><br>
             <a href="#">게시물 수정하기</a><br>
+=======
+        <div class="return">
+            <a href="{% url 'home' %}">내 냉장고로 돌아가기</a>
+            <a href="{% url 'edit' %}">게시물 수정하기</a>
+>>>>>>> 4a6d16ebb6e29a27a24a009b73d558516467c5ad
             <a href="#">게시물 삭제하기</a>
             </div>
         </div>
