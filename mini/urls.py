@@ -34,5 +34,5 @@ urlpatterns = [
     path('edit/<int:post_pk>/', views.edit, name='edit'),
     path('delete/<int:post_pk>/', views.delete, name='delete'),
     path('about/', views.about, name = 'about'),
-    path('new/', views.new, name = 'new')
+    path('new/', views.new, name = 'new'),
 ]
