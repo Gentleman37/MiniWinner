@@ -25,7 +25,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup', views.signup, name='signup'),
     path('cohome/', views.cohome, name = 'cohome'),
-    path('cohome/<str:copost_tag>', views.cohomewithtag, name = 'cohomewithtag'),
     path('conew/', views.conew, name='conew'),
     path('detail/', views.detail, name="detail2"),
     path('codetail/<int:copost_pk>/', views.codetail, name='codetail'),

@@ -42,4 +42,4 @@ class UserForm(forms.ModelForm):
 class CopostForm(forms.ModelForm):
     class Meta:
         model = Copost
-        fields = ('cotitle', 'user_name', 'cocontents',)
+        fields = ('title', 'user_name', 'contents',)

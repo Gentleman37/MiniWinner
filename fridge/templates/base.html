@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = 'stylesheet' href = "{%static 'base.css' %}?v=0.7"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Nanum+Gothic|Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel = 'stylesheet' href = "{%static 'base.css' %}?v=0.7"/>
     <title>MR.Fridge</title>
 </head>
 <body>
 
     <div class="navbar">
-        <div class="logo"><a href="{% url 'home' %}"><img src= "{% static 'logo1.png' %}" width=170px ></div>
+        <div class="logo"><a href="{% url 'home' %}"><img src= "{% static 'logo1.png' %}" width=200px ></div>
         <div class="items">
             <div class="navitem"><a href="{% url 'home' %}">{{ user.username }}님의 냉장고</a></div>
             <div class="navitem"><a href="{% url 'about' %}">ABOUT</a></div>
