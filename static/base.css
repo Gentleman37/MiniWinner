@@ -8,7 +8,7 @@ body{
 .navbar {
     width: 100%;
     height: 50px;
-    padding: 10px;
+    padding: 20px;
     background-color: #ffffff56;
     display: flex;
     align-items: center;
@@ -16,9 +16,10 @@ body{
     margin: 0;
   }
   
-.navitem {
+.navitem a{
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
+    margin : 0 2px;
   }
 
 .items{
@@ -26,7 +27,7 @@ body{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width:25%;
+  width:35%;
   margin-right: 1%;
 }
   a {
@@ -40,12 +41,6 @@ body{
 
 
 
-
-
-
- 
- 
-
 /* home.html */
 .home_p1{
   background-image:url('home_img3.jpg');
@@ -53,6 +48,7 @@ body{
   background-position-y: 28%;
   height: 60vh;
   max-width : 100%;
+  margin-bottom: 4%;
 }
 .home_text{
   display: flex;
@@ -62,14 +58,16 @@ body{
   justify-content: space-around;
   align-items: center;
   padding-top: 8%;
+
 }
 
 .hello1{
 
   font-family: 'Lobster', cursive;
   font-size: 600%;
-  color : rgba(33, 70, 39, 0.945);
+  color : rgba(45, 90, 51, 0.945);
   margin-right: 30%;
+  line-height: 1.2em;
 
 }
 .hello2{
@@ -85,13 +83,15 @@ body{
   font-family:'Lobster', cursive;
 }
 .home_p2{
+  border-top: 2px solid rgba(128, 128, 128, 0.411);
   display: flex;
   flex-wrap: wrap;
   width : 75%;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 3% auto;
+  margin: 1% auto;
+  padding-top :2%;
 }
 .contents{
   display: flex;
@@ -99,7 +99,7 @@ body{
   width: 27vh;
   height: 36vh;
   background-color: rgba(207, 207, 207, 0.267);
-  margin : 0.5%;
+  margin : 2% 1%;
   padding : 2%;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,7 @@ body{
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'Nanum Gothic', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom : 7%;
   margin-right: 10%;
 
@@ -139,6 +139,13 @@ body{
   color : rgb(219, 44, 67);
   font-weight: bold;
 }
+.my2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 13%;
+  margin-top: 30%;
+}
 
 /* detail.html */
 .dldl {
@@ -148,7 +155,6 @@ body{
 }
 
 .detail{
-  position: absolute;
   width: 650px;
   height: 500px;
   border: black solid 1px;
@@ -245,50 +251,74 @@ body{
   margin: 0 7%;
 
 }
+.find-recipe{
+  font-size: 35px;
+  font-weight: bold;
+  padding : 5px 45px;
+  margin: 1% 0;
+  border-radius: 3%;
+}
 .recipe-search {
-  background-color: bisque;
-  margin-top: 2%;
+
+  margin: 5% auto;
+  margin-bottom: 8%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 20px;
   font-family: 'Nanum Gothic', sans-serif;
+  height: 25vh;
+  border : 3px solid rgba(143, 143, 143, 0.233);
+  width: 60%;
 }
 .recipe-search form {
-  background-color: aqua;
+
   width: 65%;
   display: flex;
   justify-content: space-around;
 }
 .recipe-checkbox {
-  background-color: blue;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .recipe-checkbox div {
-  background-color: blueviolet;
-  margin: 0 10px;
+
+  margin: 2px 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
 }
 .recipe-toggle-button {
   margin-top: 20px;
 }
 .recipe-toggle-button button {
-  font-size: 16px;
+  font-size: 18px;
   width: fit-content;
-  border-radius: 3px;
+  padding: 4px 70px;
+  border : 3px solid rgb(4, 158, 4);
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 15%;
+  color: rgba(3, 88, 3, 0.897);
 }
-
+.my{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 5.3%;
+  margin-top: 30%;
+}
 .recipe-posts {
-  background-color: aquamarine;
+  border-top : 1.5px solid rgba(128, 128, 128, 0.486);
+  padding-top: 3vh; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  margin: 2% auto;
+  margin: 0.5% auto;
 }
 .recipe-images {
   height: 400px;
@@ -341,22 +371,116 @@ body{
 
 /* edit.html */
 
+
+/* cohome.html*/
+.hello_cohome{
+  font-family: 'Lobster', cursive;
+  font-size: 600%;
+  color : rgba(33, 70, 39, 0.945);
+  margin-right: 30%;
+  margin-top: 100px;
+  line-height: 1.2em;
+}
+
+
+.cohome_p1{
+  margin-top :50px;
+  background-image: url('배경_요리.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding-top : 40px;
+  padding-left : 40px;
+  color:white;
+}
+
+.cohome_p2{
+  width: 75%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 3% auto;
+  box-sizing: border-box;
+
+}
+
+.coposts_title{
+  color: black;
+}
+.pagination{
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.button_cohome{
+  margin-top: 8px;
+}
 /*copost.html*/
 .codetail{
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 300px;
+  height: 1400px;
 }
 
 .codetail_return{
+  position: absolute;
+
+  margin-top: 770px;
+  margin-left: 350px;
+}
+
+.gg{
+  margin-left:395px;
+  margin-top: 250px;
+  position: absolute;
+
+}
+.codetail_content{
+  text-align: center;
+  margin-top: 250px;
+}
+
+.hello_conew{
+  font-family: 'Lobster', cursive;
+  font-size: 600%;
+  color : rgba(247, 247, 247, 0.945);
+  margin-right: 30%;
   margin-top: 50px;
 }
 
-.codetail_content{
-  text-align: center;
+.conew_p1{
+  background-image: url('도마.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding-top: 50px;
+  padding-left: 70px;
 }
 
-#bg { position: fixed; top: 0; left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
+.conew_p2{
+  width: 75%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% auto;
+  box-sizing: border-box;
+}
+
+.conew_p2 span{
+  font-family: moon;
+  font-size: 20px;
+}
+
+.cotitle input{
+  width: 100px;
+  height: 10px;
+}
