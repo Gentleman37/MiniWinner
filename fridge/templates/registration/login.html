@@ -20,8 +20,8 @@
         <div class="loginlabel"><span class="userlabel">Username</span>: {{ form.username }}</div>
         <div class="loginlabel"><span class="userlabel">Password</span>: {{ form.password }}</div>
         <div class="login-buttons">
-            <button type="submit">Login</button>
-            <a href="{% url 'signup' %}"><button>Signup</button></a>
+            <input type="submit" value="Login">
+            <a href="{% url 'signup' %}"><input type="button" value="Signup"></a>
         </div>
     </div>
     </form>
